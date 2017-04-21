@@ -1,4 +1,27 @@
-# Το αρχείο Turtle του λεξιλογίου RDFS που περιγράφει
-# τις κλάσεις και τις ιδιότητες του ωρολογίου προγράμματος.
-
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX kalo: <http://dilab77.ionio.gr/swp/kalogerop/vocab#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+kalo:Professor rdf:type rdfs:Class .
+kalo:Year rdf:type rdfs:Class .
+kalo:Dialexh rdf:type rdfs:Class .
+kalo:Course rdf:type rdfs:Class .
+kalo:Class rdf:type rdfs:Class .
+kalo:Professor rdfs:subClassOf foaf:Person .
+kalo:year rdf:type rdf:Property .
+kalo:professor rdf:type rdf:Property .
+kalo:dialexh rdf:type rdf:Property .
+kalo:course rdf:type rdf:Property .
+kalo:class rdf:type rdf:Property .
+kalo:year rdfs:domain kalo:Year .
+kalo:professor rdfs:domain kalo:Professor .
+kalo:course rdfs:domain kalo:Course .
+kalo:class rdfs:domain kalo:Class .
+kalo:dialexh rdfs:domain kalo:Dialexh .
+kalo:professor rdfs:range kalo:Professor .
+kalo:course rdfs:range kalo:Course .
+kalo:class rdfs:range kalo:Class .
+kalo:year  rdfs:range xsd:string .
+kalo:dialexh rdfs:range xsd:date .
 
